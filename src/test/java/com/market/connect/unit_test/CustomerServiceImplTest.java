@@ -5,7 +5,6 @@ import com.market.connect.models.entities.Customer;
 import com.market.connect.repositories.CustomerRepository;
 import com.market.connect.services.CustomerServiceImpl;
 import com.market.connect.services.CustomerValidationService;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -64,5 +63,12 @@ class CustomerServiceImplTest {
         verify(customerRepository, times(1)).save(customer);
         assertNotNull(customerDTO.getId());
         assertEquals(requestCustomerDTO.getEmail(), customerDTO.getEmail());
+    }
+
+    @Test
+    void getFilteredCustomersShouldPass() {
+        //GIVEN
+        //WHEN
+        //THEN
     }
 }
